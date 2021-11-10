@@ -1,9 +1,10 @@
 import React from 'react';
+import BannerHotel from './BannerHotel/BannerHotel';
 
 const Hotels = () => {
     return (
         <div>
-            <h1>this is hotel</h1>
+            <BannerHotel></BannerHotel>
         </div>
     );
 };

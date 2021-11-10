@@ -1,40 +1,40 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import banner1 from '../../../../images/bannerHome/banner1.png'
-import banner2 from '../../../../images/bannerHome/banner2.png'
-import banner3 from '../../../../images/bannerHome/banner3.png'
-import banner4 from '../../../../images/bannerHome/banner4.png'
 
-const Banner = () => {
+import bannerTransport1 from '../../../../images/bannerTransport/transport1.png'
+import bannerTransport2 from '../../../../images/bannerTransport/transport2.png'
+import bannerTransport3 from '../../../../images/bannerTransport/transport3.png'
+import bannerTransport4 from '../../../../images/bannerTransport/transport4.png'
+
+const BannerTransport = () => {
     return (
         <>
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner1}
+                        src={bannerTransport1}
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner2}
+                        src={bannerTransport2}
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner3}
+                        src={bannerTransport3}
                         alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner4}
+                        src={bannerTransport4}
                         alt="Fourth slide"
                     />
                 </Carousel.Item>
@@ -43,4 +43,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default BannerTransport;

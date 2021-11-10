@@ -1,9 +1,10 @@
 import React from 'react';
+import BannerTransport from './BannerTransport/BannerTransport';
 
 const Transports = () => {
     return (
         <div>
-            <h1>this is transport</h1>
+            <BannerTransport></BannerTransport>
         </div>
     );
 };

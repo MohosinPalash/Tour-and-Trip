@@ -1,0 +1,79 @@
+
+.footer{
+    margin-top: -5px;
+}
+.paragraph{
+    color: #fff;
+    line-height: 25px;
+    text-align:left;
+}
+li{
+    color: #fff;
+    line-height: 25px;
+    text-align:left;
+}
+h3{
+    color: orangered;
+    text-align:left;
+}
+h3:before{
+    content: "| ";
+    columns: orangered;
+    padding-right: 10px;;
+}
+.footer-top{
+    background: #111;
+    padding: 80px 0;
+}
+.segment-two ul li{
+    border-bottom: 1px solid lightgrey;
+    line-height: 30px;
+    list-style:circle;
+}
+.segment-three a{
+    background: orangered;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+}
+.segment-three a i{
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 12px;
+}
+.segment-three a i:hover{
+    background: white;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    color: orangered;
+}
+.segment-four form input[type=submit]{
+    background-color: orangered;
+    border: none;
+    padding: 3px 15px;
+    margin-left: -5px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-bottom-text{
+    text-align: center;
+    background: black;
+    line-height: 75px;
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .md-mb-30{
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (min-width: 767px){
+    .sm-mb-30{
+        margin-bottom: 30px;
+    }
+    .footer-top{
+        padding: 50px;
+    }
+}

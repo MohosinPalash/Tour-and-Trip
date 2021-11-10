@@ -1,40 +1,40 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import banner1 from '../../../../images/bannerHome/banner1.png'
-import banner2 from '../../../../images/bannerHome/banner2.png'
-import banner3 from '../../../../images/bannerHome/banner3.png'
-import banner4 from '../../../../images/bannerHome/banner4.png'
 
-const Banner = () => {
+import bannerHotel1 from '../../../../images/bannerHotels/hotel1.png'
+import bannerHotel2 from '../../../../images/bannerHotels/hotel2.png'
+import bannerHotel3 from '../../../../images/bannerHotels/hotel3.png'
+import bannerHotel4 from '../../../../images/bannerHotels/hotel4.png'
+const BannerHotel = () => {
     return (
         <>
             <Carousel>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner1}
+                        src={bannerHotel1}
                         alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner2}
+                        src={bannerHotel2}
                         alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner3}
+                        src={bannerHotel3}
                         alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src={banner4}
+                        src={bannerHotel4}
                         alt="Fourth slide"
                     />
                 </Carousel.Item>
@@ -43,4 +43,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default BannerHotel;
