@@ -2,7 +2,10 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../../src/images/basic/logo.png'
+import useAuth from '../../../contexts/useAuth';
 const Header = () => {
+    const { user, logout } = useAuth();
+    console.log(user);
     return (
         <>
             <Navbar sticky="top" bg="dark" variant="dark" collapseOnSelect expand="lg">
@@ -13,11 +16,12 @@ const Header = () => {
                         <Navbar.Text><Nav.Link as={Link} to="/home">Home</Nav.Link></Navbar.Text>
                         <Navbar.Text><Nav.Link as={Link} to="/hotels">Hotels</Nav.Link></Navbar.Text>
                         <Navbar.Text><Nav.Link as={Link} to="/transports">Transports</Nav.Link></Navbar.Text>
-                        <Navbar.Text><Nav.Link as={Link} to="/myOrder">My Order</Nav.Link></Navbar.Text>
-                        <Navbar.Text><Nav.Link as={Link} to="/manageOrder">Manage</Nav.Link></Navbar.Text>
-                        <Navbar.Text><Nav.Link as={Link} to="/addService">Add Service</Nav.Link></Navbar.Text>
-                        {/* {user?.email ?
+
+                        {user?.email ?
                             <>
+                                <Navbar.Text><Nav.Link as={Link} to="/myOrder">My Order</Nav.Link></Navbar.Text>
+                                <Navbar.Text><Nav.Link as={Link} to="/manageOrder">Manage Order</Nav.Link></Navbar.Text>
+                                <Navbar.Text><Nav.Link as={Link} to="/addService">Add Service</Nav.Link></Navbar.Text>
                                 <Navbar.Text style={{ color: "white", cursor: "pointer" }} onClick={logout}>Logout</Navbar.Text>
                                 <Navbar.Text>
                                     <Nav.Link as={Link} to="/home" style={{ marginTop: "0" }}>Welcome {user?.displayName.split(" ")[0]}<img src={user?.photoURL} style={{
@@ -31,7 +35,7 @@ const Header = () => {
                                 </Navbar.Text>
                             </>
                             :
-                            <Navbar.Text><Nav.Link as={Link} to="/login">Login</Nav.Link></Navbar.Text>} */}
+                            <Navbar.Text><Nav.Link as={Link} to="/login">Login</Nav.Link></Navbar.Text>}
 
                     </Navbar.Collapse>
                 </Container>
