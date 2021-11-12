@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SinglePackage = (props) => {
     const { _id, title, description, fare, dp, dd, nn } = props.pkg;
+    // console.log(_id);
     return (
         <Col>
             <Card className="package-div">
@@ -15,8 +16,8 @@ const SinglePackage = (props) => {
                     <Card.Text className="package-intro">{description}</Card.Text>
                     <Card.Text><strong>Charge: TK. {fare}</strong></Card.Text>
                 </Card.Body>
-                <Link to={`/placeOrder`}><button className="place-order-button"><strong>PLACE ORDER</strong></button></Link>
-                {/* <Link to={`/placeOrder/${_id}`}><button className="place-order-button">See Details</button></Link> */}
+                {/* <Link to={`/placeOrder`}><button className="place-order-button"><strong>PLACE ORDER</strong></button></Link> */}
+                <Link to={`/placeOrder/${_id}`}><button className="place-order-button"><strong>PLACE ORDER</strong></button></Link>
             </Card>
         </Col>
     );

@@ -26,7 +26,7 @@ const AddService = () => {
                 <input type="number" {...register("dd", { required: true })} placeholder="Number of Days" />
                 <input type="number" {...register("nn", { required: true })} placeholder="Number of Nights" />
 
-                <input type="submit" />
+                <input type="submit" value="ADD NEW PACKAGE" />
             </form>
         </div>
     );
