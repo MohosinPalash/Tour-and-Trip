@@ -3,6 +3,7 @@ import './Home.css'
 import Banner from '../Banner/Banner';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SinglePackage from '../SinglePackage/SinglePackage';
+import { Spinner } from 'react-bootstrap';
 const Home = () => {
 
     const [packages, setPackages] = useState([]);
@@ -12,17 +13,20 @@ const Home = () => {
             .then(data => setPackages(data));
     }, [packages])
     return (
-        <div>
-            <Banner></Banner>
-            <h1 className="heading">OUR PACKAGES</h1>
-            <div className="package-container">
+        packages.length > 0 ?
+            <div>
+                <Banner></Banner>
+                <h1 className="heading">OUR PACKAGES</h1>
+                <div className="package-container">
 
-                {
-                    packages.map(pkg => <SinglePackage pkg={pkg}></SinglePackage>)
-                }
+                    {
+                        packages.map(pkg => <SinglePackage pkg={pkg}></SinglePackage>)
+                    }
+                </div>
+
             </div>
-
-        </div>
+            :
+            <Spinner animation="border" variant="danger"></Spinner>
     );
 };
 
