@@ -37,7 +37,7 @@ const ManageOrder = () => {
                                     <td>{order.name}</td>
                                     <td>{order.title}</td>
                                     <td>{order.fare}</td>
-                                    <td>Confirm Cancel</td>
+                                    <td><button className="btn btn-primary">Confirm</button> <button className="btn btn-danger">Cancel</button></td>
                                 </tr>
                             </tbody>
                         )

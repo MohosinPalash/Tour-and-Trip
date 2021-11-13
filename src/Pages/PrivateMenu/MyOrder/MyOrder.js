@@ -23,6 +23,7 @@ const MyOrder = () => {
                             <th>Customer Name</th>
                             <th>Package Title</th>
                             <th>Fare</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -36,7 +37,8 @@ const MyOrder = () => {
                                     <td>{order.name}</td>
                                     <td>{order.title}</td>
                                     <td>{order.fare}</td>
-                                    <td>Confirm Cancel</td>
+                                    <td>{order.status}</td>
+                                    <td><button className="btn btn-danger">Cancel Order</button></td>
                                 </tr>
                             </tbody>
                         )
