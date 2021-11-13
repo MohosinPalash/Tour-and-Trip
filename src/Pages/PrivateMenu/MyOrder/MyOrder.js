@@ -1,19 +1,42 @@
 import React, { useEffect, useState } from 'react';
-import { Spinner, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import useAuth from '../../../contexts/useAuth';
 
 const MyOrder = () => {
     const { user, logout } = useAuth();
     const [orders, setOrders] = useState([]);
+
     useEffect(() => {
         fetch(`http://localhost:5000/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders])
+
+    //Delete order
+    const handleDeleteOrder = id => {
+        const proceed = window.confirm('Are you sure you want to cancel the order?');
+        if (proceed) {
+            const url = `http://localhost:5000/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Order Cancelled Successfully!');
+                        const remainingOrder = orders.filter(order => order._id != id)
+                        setOrders(remainingOrder);
+                    }
+                })
+        }
+    }
+
+
+
     return (
         orders.length > 0 ?
             <div className="container">
-                <h1>this is manage order</h1>
+                <h1>this is My order</h1>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
@@ -38,7 +61,8 @@ const MyOrder = () => {
                                     <td>{order.title}</td>
                                     <td>{order.fare}</td>
                                     <td>{order.status}</td>
-                                    <td><button className="btn btn-danger">Cancel Order</button></td>
+                                    <td><button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         )

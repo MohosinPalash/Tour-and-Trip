@@ -11,6 +11,7 @@ const ManageOrder = () => {
     }, [orders])
 
 
+
     return (
         orders.length > 0 ?
             <div className="container">
@@ -37,7 +38,13 @@ const ManageOrder = () => {
                                     <td>{order.name}</td>
                                     <td>{order.title}</td>
                                     <td>{order.fare}</td>
-                                    <td><button className="btn btn-primary">Confirm</button> <button className="btn btn-danger">Cancel</button></td>
+                                    {
+                                        order.status === 'Pending' ?
+                                            <td ><button className="btn btn-primary">Confirm</button>  <button className="btn btn-danger">Cancel</button></td>
+                                            :
+                                            <td >{order.status}</td>
+                                    }
+
                                 </tr>
                             </tbody>
                         )
