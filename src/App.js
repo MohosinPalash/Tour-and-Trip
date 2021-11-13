@@ -38,15 +38,15 @@ function App() {
             <PrivateRoute exact path="/placeOrder/:packageId">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
-            <Route exact path="/myOrder">
+            <PrivateRoute exact path="/myOrder">
               <MyOrder></MyOrder>
-            </Route>
-            <Route exact path="/manageOrder">
+            </PrivateRoute>
+            <PrivateRoute exact path="/manageOrder">
               <ManageOrder></ManageOrder>
-            </Route>
-            <Route exact path="/addService">
+            </PrivateRoute>
+            <PrivateRoute exact path="/addService">
               <AddService></AddService>
-            </Route>
+            </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
             </Route>
