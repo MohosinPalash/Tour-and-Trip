@@ -61,8 +61,13 @@ const MyOrder = () => {
                                     <td>{order.title}</td>
                                     <td>{order.fare}</td>
                                     <td>{order.status}</td>
-                                    <td><button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button>
-                                    </td>
+                                    {
+                                        order.status === 'Pending' ?
+                                            <td><button className="btn btn-danger" onClick={() => handleDeleteOrder(order._id)}>Cancel Order</button></td>
+                                            :
+                                            <td >Not Allowed</td>
+                                    }
+
                                 </tr>
                             </tbody>
                         )

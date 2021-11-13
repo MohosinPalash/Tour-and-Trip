@@ -4,11 +4,38 @@ import { Spinner, Table } from 'react-bootstrap';
 const ManageOrder = () => {
 
     const [orders, setOrders] = useState([]);
+    const [updatedOrder, setUpdatedOrder] = useState({});
     useEffect(() => {
         fetch('http://localhost:5000/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders])
+
+
+    const handleActionUpdate = (id, msg) => {
+
+
+
+        const url = `http://localhost:5000/orders/${id}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setUpdatedOrder(data));
+
+        updatedOrder.status = msg;
+        console.log(updatedOrder);
+
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedOrder)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data));
+
+    }
 
 
 
@@ -40,7 +67,7 @@ const ManageOrder = () => {
                                     <td>{order.fare}</td>
                                     {
                                         order.status === 'Pending' ?
-                                            <td ><button className="btn btn-primary">Confirm</button>  <button className="btn btn-danger">Cancel</button></td>
+                                            <td ><button className="btn btn-primary" onClick={() => handleActionUpdate(order._id, 'Confirmed')}>Confirm</button>  <button className="btn btn-danger" onClick={() => handleActionUpdate(order._id, 'Cancelled')} >Cancel</button></td>
                                             :
                                             <td >{order.status}</td>
                                     }
