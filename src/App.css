@@ -1,8 +1,9 @@
 .App {
   text-align: center;
   font-family: 'Playfair Display', serif;
-  background-image: url("../src/images/basic/background.png");
+  background-image: url("../src/images/basic/bgg.png");
   background-repeat:repeat-y;
+  /* background-color: lightcyan; */
 }
 
 .App-logo {

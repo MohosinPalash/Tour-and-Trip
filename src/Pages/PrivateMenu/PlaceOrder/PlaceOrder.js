@@ -9,9 +9,6 @@ import './PlaceOrder.css'
 import b1 from '../../../images/demo/bbb/b1.png'
 import a1 from '../../../images/demo/aaa/a1.png'
 
-import b2 from '../../../images/demo/bbb/b1.png'
-import b3 from '../../../images/demo/bbb/b1.png'
-
 const PlaceOrder = () => {
     const { user, logout } = useAuth();
     const { packageId } = useParams();
