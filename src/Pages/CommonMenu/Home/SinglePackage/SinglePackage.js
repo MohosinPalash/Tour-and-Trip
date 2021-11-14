@@ -11,7 +11,7 @@ const SinglePackage = (props) => {
             <Card className="package-div">
                 <Card.Img variant="top" className="" src={dp} />
                 <Card.Body>
-                    <Card.Title className="package-title"><strong>{title}</strong></Card.Title>
+                    <Card.Title className="single-package-title"><strong>{title}</strong></Card.Title>
                     <Card.Text className="duration"><strong>{dd} Days/{nn} Nights</strong></Card.Text>
                     <Card.Text className="package-intro">{description}</Card.Text>
                     <Card.Text><strong>Charge: TK. {fare}</strong></Card.Text>

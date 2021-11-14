@@ -13,13 +13,35 @@ import a4 from '../../../images/demo/aaa/a4.png'
 
 const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
-    const onSubmit = data => {
+    const { register: register2, handleSubmit: handleSubmit2, reset: reset2 } = useForm();
+    const { register: register3, handleSubmit: handleSubmit3, reset: reset3 } = useForm();
+    const onSubmitPackage = data => {
         console.log(data);
         axios.post('http://localhost:5000/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package Added Successfully!');
                     reset();
+                }
+            })
+    };
+    const onSubmitHotel = data => {
+        console.log(data);
+        axios.post('http://localhost:5000/hotels', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Hotel Added Successfully!');
+                    reset2();
+                }
+            })
+    };
+    const onSubmitTransport = data => {
+        console.log(data);
+        axios.post('http://localhost:5000/transports', data)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('Transport Added Successfully!');
+                    reset3();
                 }
             })
     };
@@ -31,7 +53,7 @@ const AddService = () => {
                 <div>
                     <div className="new-package">
                         <h2 className="package-title">ADD NEW PACKAGE</h2>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <form onSubmit={handleSubmit(onSubmitPackage)}>
 
                             <input type="text" {...register("title", { required: true, maxLength: 20 })} placeholder="Package Name" />
                             <textarea type="text" {...register("description", { required: true, maxLength: 200 })} placeholder="Details about the package" />
@@ -59,12 +81,12 @@ const AddService = () => {
                 <div>
                     <div className="new-hotel">
                         <h2 className="hotel-title">ADD NEW HOTEL</h2>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <form onSubmit={handleSubmit2(onSubmitHotel)}>
 
-                            <input type="text" {...register("name", { required: true, maxLength: 30 })} placeholder="Hotel Name" />
-                            <input type="text" {...register("location", { required: true, maxLength: 100 })} placeholder="Address (Location)" />
-                            <input type="number" {...register("fare", { required: true })} placeholder="Fare (Taka)" />
-                            <input type="url" {...register("cover", { required: true })} placeholder="Image URL" />
+                            <input type="text" {...register2("name", { required: true, maxLength: 30 })} placeholder="Hotel Name" />
+                            <input type="text" {...register2("location", { required: true, maxLength: 100 })} placeholder="Address (Location)" />
+                            <input type="number" {...register2("fare", { required: true })} placeholder="Fare (Taka)" />
+                            <input type="url" {...register2("cover", { required: true })} placeholder="Image URL" />
 
                             <input type="submit" value="ADD NEW HOTEL" />
                         </form>
@@ -79,16 +101,16 @@ const AddService = () => {
                 <div>
                     <div className="new-package">
                         <h2 className="package-title">ADD NEW TRANSPORT</h2>
-                        <form onSubmit={handleSubmit(onSubmit)}>
+                        <form onSubmit={handleSubmit3(onSubmitTransport)}>
 
-                            <input type="text" {...register("company", { required: true, maxLength: 30 })} placeholder="Company name" />
-                            <input type="text" {...register("from", { required: true, maxLength: 30 })} placeholder="Starts From (Location)" />
-                            <input type="text" {...register("destination", { required: true, maxLength: 30 })} placeholder="Destination (Location)" />
-                            <input type="text" {...register("departure", { required: true })} placeholder="Departing Time" />
-                            <input type="text" {...register("arrival", { required: true })} placeholder="Arrival Time" />
-                            <input type="text" {...register("class", { required: true })} placeholder="Class (Business or Economy)" />
-                            <input type="number" {...register("fare", { required: true })} placeholder="Fare (Taka)" />
-                            <input type="number" {...register("type", { required: true })} placeholder="1-Bus, 2-cruise, 3-air" />
+                            <input type="text" {...register3("company", { required: true, maxLength: 30 })} placeholder="Company name" />
+                            <input type="text" {...register3("from", { required: true, maxLength: 30 })} placeholder="Starts From (Location)" />
+                            <input type="text" {...register3("destination", { required: true, maxLength: 30 })} placeholder="Destination (Location)" />
+                            <input type="text" {...register3("departure", { required: true })} placeholder="Departing Time" />
+                            <input type="text" {...register3("arrival", { required: true })} placeholder="Arrival Time" />
+                            <input type="text" {...register3("class", { required: true })} placeholder="Class (Business or Economy)" />
+                            <input type="number" {...register3("fare", { required: true })} placeholder="Fare (Taka)" />
+                            <input type="number" {...register3("type", { required: true })} placeholder="1-Bus, 2-cruise, 3-air" />
 
                             <input type="submit" value="ADD NEW TRANSPORT" />
                         </form>
