@@ -19,7 +19,7 @@
 .banner{
     width: 100%;
 }
-.banner-grid{
+.place-order-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px 0;
@@ -32,12 +32,12 @@
 } */
 
 @media (max-width: 992px){
-    .banner-grid{
-        grid-template-columns: repeat(1, 1fr);
+    .place-order-grid{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 668px){
-    .banner-grid{
+    .place-order-grid{
         grid-template-columns: repeat(1, 1fr);
     }
     .login-info{

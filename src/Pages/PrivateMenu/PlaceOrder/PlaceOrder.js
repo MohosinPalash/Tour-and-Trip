@@ -8,6 +8,7 @@ import './PlaceOrder.css'
 
 import b1 from '../../../images/demo/bbb/b1.png'
 import a1 from '../../../images/demo/aaa/a1.png'
+import SinglePackage from '../../CommonMenu/Home/SinglePackage/SinglePackage';
 
 const PlaceOrder = () => {
     const { user, logout } = useAuth();
@@ -39,8 +40,9 @@ const PlaceOrder = () => {
     return (
         <>
             <img src={a1} className="banner" alt="" />
-            <div className="banner-grid">
+            <div className="place-order-grid">
                 <div>
+
                     <div className="place-order">
 
                         <form onSubmit={handleSubmit(onSubmit)}>
@@ -57,9 +59,12 @@ const PlaceOrder = () => {
                         </form>
 
                     </div>
+                    <img src={b1} alt="" />
                 </div>
                 <div className="login-info">
-                    <img src={b1} />
+                    {
+                        <SinglePackage pkg={packages}></SinglePackage>
+                    }
 
                 </div>
             </div>
