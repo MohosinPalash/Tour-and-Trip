@@ -1,6 +1,7 @@
 # TRIP & TOUR
 
-The website is an e-commerce based website where a travel agency publishes its available tour packages, provide hotel renting facilities and transport information and many more. our website logo-
+The website is an e-commerce based website where a travel agency publishes its available tour packages, provide hotel renting facilities and transport information and many more. our website Link-
+[Tour & TRIp](https://tour-and-trip.web.app/)
 ![alt text](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash/blob/main/src/images/basic/logo.png)
 
 
@@ -16,7 +17,7 @@ In the project directory, there are a good number of features like-
 7. He may also add new packages, hotels and transports.
 8. The website is responsive for mobile, tablet and laptop.
 
-Here, are the brief points of this project. To explore all features you must visit the following link. [Visit TOUR & TRIP](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash)
+Here, are the brief points of this project. To explore all features you must visit the following link. [Visit TOUR & TRIP](https://tour-and-trip.web.app/)
 
 ## Framework and languages
 1. HTML5, CSS3
