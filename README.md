@@ -1,7 +1,7 @@
 # TRIP & TOUR
 
 The website is an e-commerce based website where a travel agency publishes its available tour packages, provide hotel renting facilities and transport information and many more. our website logo-
-![alt text](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash/blob/main/src/images/basic/login_bg.jpg)
+![alt text](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash/blob/main/src/images/basic/logo.png)
 
 
 ## Features
