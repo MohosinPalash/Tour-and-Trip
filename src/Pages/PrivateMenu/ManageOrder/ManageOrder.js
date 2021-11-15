@@ -42,7 +42,7 @@ const ManageOrder = () => {
     return (
         orders.length > 0 ?
             <div className="container">
-                <h1>this is manage order</h1>
+                <h1 style={{ fontWeight: '600' }}>Admin Manage Order</h1>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>

@@ -36,7 +36,7 @@ const MyOrder = () => {
     return (
         orders.length > 0 ?
             <div className="container">
-                <h1>this is My order</h1>
+                <h2 style={{ fontWeight: '600' }}>My Orders</h2>
                 <Table striped bordered hover variant="dark">
                     <thead>
                         <tr>
