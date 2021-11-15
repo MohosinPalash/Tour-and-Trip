@@ -15,7 +15,7 @@ const PlaceOrder = () => {
     const [packages, setPackages] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/packages/${packageId}`)
+        fetch(`https://secure-bayou-86822.herokuapp.com/packages/${packageId}`)
             .then(res => res.json())
             .then(data => setPackages(data));
 
@@ -26,7 +26,7 @@ const PlaceOrder = () => {
         data.status = 'Pending';
         data.pkgID = packageId;
         console.log('data', data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://secure-bayou-86822.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your Order is placed Successfully!');

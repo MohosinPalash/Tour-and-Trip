@@ -6,7 +6,7 @@ const ManageOrder = () => {
     const [orders, setOrders] = useState([]);
     const [updatedOrder, setUpdatedOrder] = useState({});
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://secure-bayou-86822.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders])
@@ -16,7 +16,7 @@ const ManageOrder = () => {
 
 
 
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://secure-bayou-86822.herokuapp.com/orders/${id}`;
 
         fetch(url)
             .then(res => res.json())

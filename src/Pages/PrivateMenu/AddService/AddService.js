@@ -17,7 +17,7 @@ const AddService = () => {
     const { register: register3, handleSubmit: handleSubmit3, reset: reset3 } = useForm();
     const onSubmitPackage = data => {
         console.log(data);
-        axios.post('http://localhost:5000/packages', data)
+        axios.post('https://secure-bayou-86822.herokuapp.com/packages', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Package Added Successfully!');
@@ -27,7 +27,7 @@ const AddService = () => {
     };
     const onSubmitHotel = data => {
         console.log(data);
-        axios.post('http://localhost:5000/hotels', data)
+        axios.post('https://secure-bayou-86822.herokuapp.com/hotels', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Hotel Added Successfully!');
@@ -37,7 +37,7 @@ const AddService = () => {
     };
     const onSubmitTransport = data => {
         console.log(data);
-        axios.post('http://localhost:5000/transports', data)
+        axios.post('https://secure-bayou-86822.herokuapp.com/transports', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Transport Added Successfully!');

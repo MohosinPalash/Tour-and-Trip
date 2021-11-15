@@ -16,7 +16,7 @@ In the project directory, there are a good number of features like-
 7. He may also add new packages, hotels and transports.
 8. The website is responsive for mobile, tablet and laptop.
 
-Here, are the brief points of this project. To explore all features you must visit the following link. [Visit TRIP and TOUR](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash)
+Here, are the brief points of this project. To explore all features you must visit the following link. [Visit TOUR & TRIP](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-MohosinPalash)
 
 ## Framework and languages
 1. HTML5, CSS3

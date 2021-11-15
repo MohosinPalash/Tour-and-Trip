@@ -6,7 +6,7 @@ const Transports = () => {
 
     const [transports, setTransports] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/transports')
+        fetch('https://secure-bayou-86822.herokuapp.com/transports')
             .then(res => res.json())
             .then(data => setTransports(data));
     }, [transports])

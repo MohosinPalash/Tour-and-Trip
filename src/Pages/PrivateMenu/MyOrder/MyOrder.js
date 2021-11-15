@@ -7,7 +7,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user.email}`)
+        fetch(`https://secure-bayou-86822.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [orders])
@@ -16,7 +16,7 @@ const MyOrder = () => {
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure you want to cancel the order?');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://secure-bayou-86822.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
