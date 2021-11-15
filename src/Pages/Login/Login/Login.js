@@ -32,8 +32,8 @@ const Login = () => {
 
                 </div>
                 <div className="login-info">
-                    <img src={logo} style={{ height: '250px', width: '250px' }} />
-                    <h5 style={{ padding: '0px 20px' }}>Warning: To get our services, you must login with us. <br /> No complexity, No late! <br /> Just tap on the below button and<br />  Sign in with GOOGLE</h5>
+                    <img src={logo} alt="" style={{ height: '250px', width: '250px' }} />
+                    <p style={{ padding: '0px 20px', fontWeight: '600' }}>Warning: To get our services, you must login with us. <br /> No complexity, No late! <br /> Just tap on the below button and<br />  Sign in with GOOGLE</p>
                     <button onClick={handleGoogleLogin} className="btn btn-danger"><strong>Sign in with GOOGLE</strong></button>
                 </div>
             </div>

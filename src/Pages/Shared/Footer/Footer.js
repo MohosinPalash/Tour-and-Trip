@@ -42,7 +42,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="footer-bottom-text paragraph">All rights reserved by &copy; MEDICA 2021</p>
+            <p className="footer-bottom-text paragraph">All rights reserved by &copy; TOUR & TRIP 2021</p>
         </div>
     );
 };

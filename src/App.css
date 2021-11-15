@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Playfair Display', serif;
+  font-weight: 500;
   background-image: url("../src/images/basic/bgg.png");
   background-repeat:repeat-y;
   /* background-color: lightcyan; */
